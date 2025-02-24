@@ -1,0 +1,15 @@
+📦 Install dependencies:
+
+pip install requests
+🔗 Edit the script to add your own proxies.
+
+🚀 Future Upgrades
+🔜 Load proxies from a file or API.
+🔜 Implement auto-detection of dead proxies.
+🔜 Enhance anonymity with user-agent rotation.
+
+
+⚠ Disclaimer
+This tool is for educational & ethical use only. 🚨
+Use responsibly and respect legal boundaries. ⚖️
+
