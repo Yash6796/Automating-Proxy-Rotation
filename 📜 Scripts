@@ -1,6 +1,33 @@
 📜 Scripts
 1️⃣ Random Proxy Picker & Tester
 🎯 What it does:
+Selects a random proxy from a predefined list.
+Sends a test request to http://httpbin.org/ip.
+Confirms if the proxy is working or no
+this is the script{}
+
+import requests
+import random
+
+# Load proxies from file
+with open("proxies.txt", "r") as f:
+    proxy_list = f.read().splitlines()
+
+def get_random_proxy():
+    return random.choice(proxy_list)
+
+url = "http://httpbin.org/ip"
+
+while True:
+    proxy = get_random_proxy()
+    proxies = {"http": proxy, "https": proxy}
+
+    try:
+        response = requests.get(url, proxies=proxies, timeout=5)
+        print(f"✅ Proxy {proxy} is working: {response.json()}")
+        break
+    except:
+        print(f"❌ Proxy {proxy} failed! Trying another one...")
 
 Selects a random proxy from a predefined list.
 Sends a test request to http://httpbin.org/ip.
